@@ -1,19 +1,20 @@
-#include "clas.h"
-istream &operator>>(istream &is, vdv obj) {
+#include "VanDongVien.h"
+#include <string>
+istream &operator>>(istream &is, vdv& obj) {
 
 	cout << "Nhap ho va ten: "; fflush(stdin); getline(is, obj.name);
 	cout << "Nhap mon thi dau: "; fflush(stdin); getline(is, obj.sport);
-	cout << "Nhap tuoi: "; cin >> obj.age;
-	cout << "Nhap chieu cao: "; cin >> obj.height;
-	cout << "Nhap can nang: "; cin >> obj.weight;
+	cout << "Nhap tuoi: "; is >> obj.age;
+	cout << "Nhap chieu cao: "; is >> obj.height;
+	cout << "Nhap can nang: "; is >> obj.weight;
 	return is;
 }
 ostream &operator<< (ostream & os, vdv obj) {
-	cout << "Ho va ten: " << obj.name << endl;
-	cout << "Mon thi dau: " << obj.sport << endl;
-	cout << "Tuoi: " << obj.age << endl;
-	cout << "Chieu cao: " << obj.height << endl;
-	cout << "Can nang: " << obj.weight << endl;
+	os << "Ho va ten: " << obj.name << endl;
+	os << "Mon thi dau: " << obj.sport << endl;
+	os << "Tuoi: " << obj.age << endl;
+	os << "Chieu cao: " << obj.height << endl;
+	os << "Can nang: " << obj.weight << endl;
 	return os;
 }
 bool vdv::operator>(vdv obj) {
