@@ -17,7 +17,7 @@ public:
 		age = 0;
 		height = weight = 0;
 	}
-	friend istream& operator>>(istream &is, vdv obj);
-	friend ostream& operator<<(ostream &os, vdv u);
+	friend istream& operator>>(istream &is, vdv &obj);
+	friend ostream& operator<<(ostream &os, vdv obj);
 	bool operator>(vdv obj);
 };
